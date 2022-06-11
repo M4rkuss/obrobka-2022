@@ -1,0 +1,31 @@
+<div class="updform" *ngFor="let a of footballerList">
+  <div class="double">
+    <h3>{{ a.title }}</h3>
+    <button class="selectbutton" (click)="onSelect(a)">Select!</button>
+  </div>
+</div>
+<div *ngIf="selectedItem">
+  <form #form2="ngForm" (ngSubmit)="updateRest(form2.value)" class="updform">
+    <input
+      type="text"
+      placeholder="Name of the Footballer"
+      name="title"
+      ngModel="{{ selectedItem.title }}"
+    />
+    <input
+      type="text"
+      placeholder="Type of the Footballer"
+      name="type"
+      ngModel="{{ selectedItem.type }}"
+    />
+    <input
+      type="number"
+      min="1"
+      max="5000"
+      placeholder="Price of the Footballer"
+      name="price"
+      ngModel="{{ selectedItem.price }}"
+    />
+    <input type="submit" class="addbutton" value="Update Footballer!" />
+  </form>
+</div>

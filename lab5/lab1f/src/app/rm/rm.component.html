@@ -1,0 +1,6 @@
+<div class="rmform" *ngFor="let a of footballerList">
+  <div class="double">
+    <h3>{{ a.title }}</h3>
+    <button class="rmbutton" (click)="removeRest(a)">Delete!</button>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<form #form1="ngForm" (ngSubmit)="addRest(form1.value)" class="addform">
+  <input
+    type="text"
+    placeholder="Name of the Footballer"
+    name="title"
+    ngModel
+  />
+  <input type="text" placeholder="Type of the Footballer" name="type" ngModel />
+  <input
+    type="number"
+    min="1"
+    max="5000"
+    placeholder="Price of the Footballer"
+    name="price"
+    ngModel
+  />
+  <input type="submit" class="addbutton" value="Add Footballer!" />
+</form>

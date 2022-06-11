@@ -1,0 +1,9 @@
+.katzen{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    img{
+        border-radius: 20px;
+    }
+}
